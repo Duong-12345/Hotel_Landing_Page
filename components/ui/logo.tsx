@@ -2,21 +2,18 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="inline-flex" aria-label="Cruip">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <path
-          className="fill-blue-500"
-          fillRule="evenodd"
-          d="M15.052 0c6.914.513 12.434 6.033 12.947 12.947h-5.015a7.932 7.932 0 0 1-7.932-7.932V0Zm-2.105 22.985V28C6.033 27.487.513 21.967 0 15.053h5.015a7.932 7.932 0 0 1 7.932 7.932Z"
-          clipRule="evenodd"
-        />
-        <path
-          className="fill-blue-300"
-          fillRule="evenodd"
-          d="M0 12.947C.513 6.033 6.033.513 12.947 0v5.015a7.932 7.932 0 0 1-7.932 7.932H0Zm22.984 2.106h5.015C27.486 21.967 21.966 27.487 15.052 28v-5.015a7.932 7.932 0 0 1 7.932-7.932Z"
-          clipRule="evenodd"
-        />
-      </svg>
+    <Link href="/" className="inline-flex items-center gap-3" aria-label="6 Senses Hotel">
+      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[linear-gradient(135deg,#f35f99,#ffd0dc)] text-sm font-semibold text-[#411120] shadow-[0_10px_30px_rgba(243,95,153,0.35)]">
+        6S
+      </div>
+      <div>
+        <div className="font-display text-lg leading-none text-white">
+          6 Senses Hotel
+        </div>
+        <div className="mt-1 text-[11px] uppercase tracking-[0.24em] text-[#f4c1d2]">
+          Love Hotel in Hanoi
+        </div>
+      </div>
     </Link>
   );
 }

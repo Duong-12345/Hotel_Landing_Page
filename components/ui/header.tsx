@@ -3,33 +3,61 @@ import Logo from "./logo";
 
 export default function Header() {
   return (
-    <header className="fixed top-2 z-30 w-full md:top-6">
+    <header className="fixed top-0 z-30 w-full px-3 pt-3 md:px-0 md:pt-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-white/90 px-3 shadow-lg shadow-black/[0.03] backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(var(--color-gray-100),var(--color-gray-200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
-          {/* Site branding */}
+        <div className="relative flex min-h-16 items-center justify-between gap-3 rounded-[1.5rem] border border-white/10 bg-[#1a0b12]/75 px-4 py-3 shadow-[0_18px_50px_rgba(0,0,0,0.25)] backdrop-blur-md">
           <div className="flex flex-1 items-center">
             <Logo />
           </div>
 
-          {/* Desktop sign in links */}
-          <ul className="flex flex-1 items-center justify-end gap-3">
+          <ul className="hidden flex-1 items-center justify-end gap-6 lg:flex">
             <li>
               <Link
-                href="/signin"
-                className="btn-sm bg-white text-gray-800 shadow-sm hover:bg-gray-50"
+                href="#uu-dai"
+                className="text-sm text-[#f6d6e0] transition hover:text-white"
               >
-                Login
+                Ưu đãi
               </Link>
             </li>
             <li>
               <Link
-                href="/signup"
-                className="btn-sm bg-gray-800 text-gray-200 shadow-sm hover:bg-gray-900"
+                href="#tien-ich"
+                className="text-sm text-[#f6d6e0] transition hover:text-white"
               >
-                Register
+                Trải nghiệm
               </Link>
+            </li>
+            <li>
+              <Link
+                href="#lien-he"
+                className="text-sm text-[#f6d6e0] transition hover:text-white"
+              >
+                Liên hệ
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://zalo.me/0377323247"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-11 items-center rounded-full bg-[linear-gradient(135deg,#f35f99,#ffd0dc)] px-5 text-sm font-semibold text-[#3a0e1d] transition hover:scale-[1.02]"
+              >
+                Đặt phòng ngay
+              </a>
             </li>
           </ul>
+
+          <div className="text-right lg:hidden">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-[#efb5c7]">
+              Hotline
+            </div>
+            <a
+              href="tel:0377323247"
+              className="text-sm font-semibold text-white"
+            >
+              03773.23.247
+            </a>
+          </div>
         </div>
       </div>
     </header>
