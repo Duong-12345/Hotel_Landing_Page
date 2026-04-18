@@ -167,7 +167,6 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden bg-[#080507] text-[#fff7f7]">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[40rem] bg-[radial-gradient(circle_at_top,rgba(184,52,114,0.3),transparent_50%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-72 h-[32rem] bg-[radial-gradient(circle_at_center,rgba(255,180,205,0.12),transparent_65%)]" />
 
       <section className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32">
@@ -178,18 +177,26 @@ export default function Home() {
           6 Senses Hotel • Khách sạn tình yêu Hà Nội
         </div>
 
-        <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <div>
-            <h1
-              className="max-w-4xl font-display text-5xl leading-[0.92] text-white sm:text-6xl md:text-7xl"
-              data-aos="fade-up"
-              data-aos-delay={120}
-            >
-              Không gian riêng tư, cảm xúc trọn vẹn
-            </h1>
+        <div
+          className="relative overflow-hidden rounded-[2rem] bg-black"
+          data-aos="fade-up"
+          data-aos-delay={120}
+        >
+          <div className="absolute inset-x-0 bottom-0 z-10 h-28 bg-[linear-gradient(180deg,rgba(0,0,0,0),rgba(8,5,7,0.55))]" />
+          <Image
+            src="/images/hotel/banner3.jpg"
+            alt="Bảng room tour các hạng phòng tại 6 Senses Hotel"
+            width={1528}
+            height={948}
+            className="relative z-0 w-full object-cover"
+            priority
+          />
+        </div>
 
+        <div className="grid items-start gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+          <div className="lg:pt-2">
             <div
-              className="mt-8 flex flex-col gap-3 sm:flex-row"
+              className="flex flex-col gap-3 sm:flex-row"
               data-aos="fade-up"
               data-aos-delay={320}
             >
@@ -212,7 +219,7 @@ export default function Home() {
             </div>
 
             <div
-              className="mt-8 rounded-[2rem] border border-[#f29cbc]/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+              className="mt-8 rounded-[2rem] border border-[#f29cbc]/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.35)] lg:mr-6"
               data-aos="fade-up"
               data-aos-delay={420}
             >
@@ -241,7 +248,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div data-aos="zoom-in" data-aos-delay={180}>
+          <div data-aos="zoom-in" data-aos-delay={180} className="lg:pt-2">
             <div className="relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-black shadow-[0_38px_100px_rgba(0,0,0,0.55)]">
               <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.18),rgba(0,0,0,0.7))]" />
               <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_top,rgba(255,90,170,0.26),transparent_34%)]" />
