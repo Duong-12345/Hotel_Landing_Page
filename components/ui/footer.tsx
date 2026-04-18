@@ -14,8 +14,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 Khách sạn tình yêu Hà Nội
               </h3>
               <p className="mt-3 max-w-xl text-sm leading-7 text-[#f2dbe3]">
-                Tập trung vào trải nghiệm riêng tư, thẩm mỹ quyến rũ và các tiện
-                ích giúp buổi hẹn của hai người trở nên đáng nhớ hơn.
+                6 senses hotel là khách sạn đầu tiên tại Việt Nam áp dụng tiêu chuẩn Nhật Bản cho mô hình nghỉ giờ. Tập trung vào trải nghiệm không gian riêng tư, chăm chút các giác quan, buổi hẹn hò của hai người tại đây sẽ trở nên đáng nhớ hơn.
               </p>
             </div>
 

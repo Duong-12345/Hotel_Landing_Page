@@ -11,19 +11,19 @@ const offerItems = [
 
 const highlights = [
   {
-    title: "Không gian riêng tư",
+    title: "Check in giấu mặt",
     description:
-      "Thiết kế dành cho cặp đôi, tinh tế và kín đáo, phù hợp cho một đêm nghỉ trọn cảm xúc.",
+      "Lễ tân có rèm che mặt, bảo đảm tuyệt đối thông tin cá nhân của khách hàng",
   },
   {
-    title: "Màu sắc quyến rũ",
+    title: "Vệ sinh tiêu chuẩn Nhật Bản",
     description:
-      "Ngôn ngữ thị giác lấy cảm hứng từ tông đen sâu, ánh hồng neon và cảm giác sang trọng kiểu lounge.",
+      "Từng vị trí tại 6 senses được vệ sinh tiêu chuẩn cao, đặc biệt mùi thơm tự nhiên được duy trì nhằm nâng cao trải nghiệm dịch vụTừng vị trí tại 6 senses được vệ sinh tiêu chuẩn cao, đặc biệt mùi thơm tự nhiên được duy trì nhằm nâng cao trải nghiệm dịch vụ",
   },
   {
-    title: "Trải nghiệm cao cấp",
+    title: "Dịch vụ chu đáo",
     description:
-      "Từ Jacuzzi, Dyson đến hệ giải trí 4K đều được chọn để tăng cảm giác thư giãn và khác biệt.",
+      "Lễ tân phục vụ 24/24h, hỗ trợ khách hàng mọi lúc",
   },
 ];
 
@@ -48,11 +48,75 @@ const contactActions = [
   },
 ];
 
-const roomTourImages = [
-  { src: "/images/hotel/room1.png", alt: "Room tour 1 tại 6 Senses Hotel" },
-  { src: "/images/hotel/room2.png", alt: "Room tour 2 tại 6 Senses Hotel" },
-  { src: "/images/hotel/room3.png", alt: "Room tour 3 tại 6 Senses Hotel" },
-  { src: "/images/hotel/room4.png", alt: "Room tour 4 tại 6 Senses Hotel" },
+const roomShowcases = [
+  {
+    vip: "VIP I",
+    name: "PINK WAVE",
+    accent: "#f02ac5",
+    features: ["Dyson", "GƯƠNG TRẦN", "Netflix", "35M2", "CITY VIEW", "SAUNA"],
+    prices: [
+      { label: "2 GIỜ", value: "700.000" },
+      { label: "1 ĐÊM", value: "1.400.000" },
+      { label: "1 NGÀY", value: "1.750.000" },
+    ],
+    images: [
+      "/images/hotel/VIP1/img1.jpg",
+      "/images/hotel/VIP1/img2.jpg",
+      "/images/hotel/VIP1/img3.jpg",
+    ],
+    layout: "vip1",
+  },
+  {
+    vip: "VIP II",
+    name: "BLACK CAGE",
+    accent: "#56e4ea",
+    features: ["Dyson", "GƯƠNG TRẦN", "Netflix", "35M2", "CITY VIEW"],
+    prices: [
+      { label: "2 GIỜ", value: "650.000" },
+      { label: "1 ĐÊM", value: "1.300.000" },
+      { label: "1 NGÀY", value: "1.625.000" },
+    ],
+    images: [
+      "/images/hotel/VIP2/img1.jpg",
+      "/images/hotel/VIP2/img2.jpg",
+      "/images/hotel/VIP2/img3.jpg",
+    ],
+    layout: "default",
+  },
+  {
+    vip: "VIP III",
+    name: "RED ALERT",
+    accent: "#ff3131",
+    features: ["Dyson", "GƯƠNG TRẦN", "Netflix", "30M2"],
+    prices: [
+      { label: "2 GIỜ", value: "600.000" },
+      { label: "1 ĐÊM", value: "1.200.000" },
+      { label: "1 NGÀY", value: "1.500.000" },
+    ],
+    images: [
+      "/images/hotel/VIP3/img1.jpg",
+      "/images/hotel/VIP3/img2.jpg",
+      "/images/hotel/VIP3/img3.jpg",
+    ],
+    layout: "default",
+  },
+  {
+    vip: "VIP IV",
+    name: "ROYAL CINEMA",
+    accent: "#d8c09b",
+    features: ["Dyson", "GƯƠNG TRẦN", "Netflix", "30M2"],
+    prices: [
+      { label: "2 GIỜ", value: "550.000" },
+      { label: "1 ĐÊM", value: "1.100.000" },
+      { label: "1 NGÀY", value: "1.375.000" },
+    ],
+    images: [
+      "/images/hotel/VIP4/img1.jpg",
+      "/images/hotel/VIP4/img2.jpg",
+      "/images/hotel/VIP4/img3.jpg",
+    ],
+    layout: "default",
+  },
 ];
 
 function Icon({
@@ -178,10 +242,12 @@ export default function Home() {
 
       <section className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32">
         <div
-          className="inline-flex w-fit items-center rounded-full border border-[#f3b6ca]/20 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#f8cad8]"
+          className="inline-flex w-fit items-center rounded-full border border-[#f3b6ca]/20 bg-white/[0.04] px-9 py-2 text-xs uppercase tracking-[0.28em] text-[#f8cad8]"
           data-aos="fade-up"
         >
-          6 Senses Hotel • Khách sạn tình yêu Hà Nội
+          6 SENSES HOTEL - KHÁCH SẠN TÌNH YÊU TIÊU CHUẨN NHẬT BẢN ĐẦU TIÊN TẠI HÀ NỘI
+          <br />
+          Địa chỉ: 23 phố Học Phi, p. Yên Hòa, Cầu Giấy, Hà Nội
         </div>
 
         <div
@@ -196,21 +262,163 @@ export default function Home() {
           </div>
 
           <div className="space-y-4 sm:space-y-5">
-            {roomTourImages.map((image, index) => (
+            {roomShowcases.map((room, index) => (
               <div
-                key={image.src}
-                className="overflow-hidden bg-black"
+                key={room.vip}
+                className="border p-1.5 sm:p-2"
+                style={{ borderColor: room.accent }}
                 data-aos="fade-up"
                 data-aos-delay={160 + index * 70}
               >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={1528}
-                  height={948}
-                  className="w-full object-cover"
-                  priority={index === 0}
-                />
+                <div className="bg-black">
+                  <div className="flex">
+                    <div
+                      className="border px-3 py-2 sm:px-4 sm:py-3"
+                      style={{ borderColor: room.accent, color: room.accent }}
+                    >
+                      <p className="font-display text-[1.7rem] leading-none sm:text-[2.4rem]">
+                        {room.vip}
+                      </p>
+                      <p className="mt-1 font-display text-[1.7rem] leading-none sm:text-[2.4rem]">
+                        {room.name}
+                      </p>
+                    </div>
+                    <div
+                      className="min-h-full flex-1 border border-l-0"
+                      style={{ borderColor: room.accent }}
+                    />
+                  </div>
+
+                  <div
+                    className="mt-1 grid gap-[1px] bg-black"
+                    style={{
+                      color: room.accent,
+                      gridTemplateColumns: `repeat(${room.features.length}, minmax(0, 1fr))`,
+                    }}
+                  >
+                    {room.features.map((feature) => (
+                      <div
+                        key={feature}
+                        className="flex min-h-14 items-center justify-center border bg-black px-2 text-center text-[0.82rem] font-medium leading-tight sm:text-[1.05rem]"
+                        style={{ borderColor: room.accent }}
+                      >
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* {room.layout === "vip1" ? (
+                    <div
+                      className="mt-1 grid h-[14rem] gap-[1px] bg-black sm:h-[24rem]"
+                      style={{ gridTemplateColumns: "1fr 1fr 0.62fr" }}
+                    >
+                      <div
+                        className="overflow-hidden border"
+                        style={{ borderColor: room.accent }}
+                      >
+                        <Image
+                          src={room.images[0]}
+                          alt={`${room.name} image 1`}
+                          width={1200}
+                          height={1600}
+                          className="h-full w-full object-cover"
+                          priority={index === 0}
+                        />
+                      </div>
+                      <div
+                        className="overflow-hidden border"
+                        style={{ borderColor: room.accent }}
+                      >
+                        <Image
+                          src={room.images[1]}
+                          alt={`${room.name} image 2`}
+                          width={1200}
+                          height={1600}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div className="grid gap-[1px]" style={{ gridTemplateRows: "2.2rem 1fr" }}>
+                        <div
+                          className="flex items-center justify-center border bg-black text-[0.9rem] font-medium sm:text-[1.15rem]"
+                          style={{ borderColor: room.accent, color: room.accent }}
+                        >
+                          SAUNA
+                        </div>
+                        <div
+                          className="overflow-hidden border"
+                          style={{ borderColor: room.accent }}
+                        >
+                          <Image
+                            src={room.images[2]}
+                            alt={`${room.name} image 3`}
+                            width={1200}
+                            height={1600}
+                            className="h-full w-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div
+                      className="mt-1 grid h-[14rem] grid-cols-3 gap-[1px] bg-black sm:h-[24rem]"
+                    >
+                      {room.images.map((src, imageIndex) => (
+                        <div
+                          key={src}
+                          className="overflow-hidden border"
+                          style={{ borderColor: room.accent }}
+                        >
+                          <Image
+                            src={src}
+                            alt={`${room.name} image ${imageIndex + 1}`}
+                            width={1200}
+                            height={1600}
+                            className="h-full w-full object-cover"
+                            priority={index === 0 && imageIndex === 0}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )} */}
+
+                  <div
+                      className="mt-1 grid h-[14rem] grid-cols-3 gap-[1px] bg-black sm:h-[24rem]"
+                    >
+                      {room.images.map((src, imageIndex) => (
+                        <div
+                          key={src}
+                          className="overflow-hidden border"
+                          style={{ borderColor: room.accent }}
+                        >
+                          <Image
+                            src={src}
+                            alt={`${room.name} image ${imageIndex + 1}`}
+                            width={1200}
+                            height={1600}
+                            className="h-full w-full object-cover"
+                            priority={index === 0 && imageIndex === 0}
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                  <div className="mt-1 grid grid-cols-3 gap-[1px] bg-black">
+                    {room.prices.map((price) => (
+                      <div
+                        key={price.label}
+                        className="border px-1.5 py-2 text-center sm:px-3 sm:py-3"
+                        style={{ borderColor: room.accent, color: room.accent }}
+                      >
+                        <p className="text-[0.82rem] sm:text-[1.05rem]">
+                          {price.label}
+                        </p>
+                        <p className="mt-1 break-words text-[1.2rem] font-semibold leading-none tracking-[-0.03em] sm:text-[1.8rem]">
+                          {price.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -333,12 +541,12 @@ export default function Home() {
         className="relative mx-auto max-w-6xl px-4 pb-10 sm:px-6 md:pb-14"
       >
         <div className="rounded-[2rem] border border-[#f3b6ca]/20 bg-[#1a0b12]/80 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-sm md:p-8">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             {/* <p className="text-sm uppercase tracking-[0.3em] text-[#f3bed0]">
               Nội dung chính
             </p> */}
             <h2 className="mt-3 font-display text-3xl text-white sm:text-4xl">
-              Những lý do khách hàng dễ bấm đặt phòng ngay
+              Đặt phòng ngay để hưởng các dịch vụ đặc biệt từ 6 SENSES
             </h2>
           </div>
 
@@ -393,7 +601,7 @@ export default function Home() {
                 Liên hệ nhanh
               </p>
               <h2 className="mt-3 font-display text-3xl text-white sm:text-4xl">
-                Đặt lịch nhanh, đi đường dễ, nhắn tin ngay trên điện thoại
+                Liên hệ ngay để được tư vấn, chúng tôi hoạt động 24/24h
               </h2>
             </div>
 
