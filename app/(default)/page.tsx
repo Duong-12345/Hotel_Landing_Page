@@ -48,6 +48,13 @@ const contactActions = [
   },
 ];
 
+const roomTourImages = [
+  { src: "/images/hotel/room1.png", alt: "Room tour 1 tại 6 Senses Hotel" },
+  { src: "/images/hotel/room2.png", alt: "Room tour 2 tại 6 Senses Hotel" },
+  { src: "/images/hotel/room3.png", alt: "Room tour 3 tại 6 Senses Hotel" },
+  { src: "/images/hotel/room4.png", alt: "Room tour 4 tại 6 Senses Hotel" },
+];
+
 function Icon({
   name,
   className = "h-5 w-5",
@@ -178,19 +185,35 @@ export default function Home() {
         </div>
 
         <div
-          className="relative overflow-hidden rounded-[2rem] bg-black"
+          className="overflow-hidden rounded-[2rem] bg-black px-4 py-5 sm:px-5 sm:py-6"
           data-aos="fade-up"
           data-aos-delay={120}
         >
-          <div className="absolute inset-x-0 bottom-0 z-10 h-28 bg-[linear-gradient(180deg,rgba(0,0,0,0),rgba(8,5,7,0.55))]" />
-          <Image
-            src="/images/hotel/banner3.jpg"
-            alt="Bảng room tour các hạng phòng tại 6 Senses Hotel"
-            width={1528}
-            height={948}
-            className="relative z-0 w-full object-cover"
-            priority
-          />
+          <div className="mb-4 text-center sm:mb-5">
+            <p className="font-display text-4xl uppercase tracking-[0.18em] text-[#f3559a] sm:text-5xl">
+              Room Tour
+            </p>
+          </div>
+
+          <div className="space-y-4 sm:space-y-5">
+            {roomTourImages.map((image, index) => (
+              <div
+                key={image.src}
+                className="overflow-hidden bg-black"
+                data-aos="fade-up"
+                data-aos-delay={160 + index * 70}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={1528}
+                  height={948}
+                  className="w-full object-cover"
+                  priority={index === 0}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="grid items-start gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
