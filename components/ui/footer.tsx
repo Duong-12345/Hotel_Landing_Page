@@ -37,10 +37,10 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   facebook.com/6SensesHotel
                 </a>
               </p>
-              <p className="text-[#d9b7c4]">
+              {/* <p className="text-[#d9b7c4]">
                 Giao diện đã được tinh gọn cho chiến dịch landing page ưu tiên
                 mobile.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
